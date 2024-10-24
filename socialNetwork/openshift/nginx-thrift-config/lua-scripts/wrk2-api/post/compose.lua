@@ -1,5 +1,5 @@
 local _M = {}
-local k8s_suffix = ".ai4cloudops-f7f10d9.svc.cluster.local"
+local k8s_suffix = ".ai4cloudops-11855c.svc.cluster.local"
 
 if (k8s_suffix == nil) then
   k8s_suffix = ""

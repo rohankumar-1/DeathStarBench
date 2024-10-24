@@ -34,7 +34,7 @@ function _M.RegisterUser()
     ngx.exit(ngx.HTTP_BAD_REQUEST)
   end
 
-  local client = GenericObjectPool:connection(UserServiceClient, "user-service.ai4cloudops-f7f10d9.svc.cluster.local", 9090)
+  local client = GenericObjectPool:connection(UserServiceClient, "user-service.ai4cloudops-11855c.svc.cluster.local", 9090)
 
   local status, err = pcall(client.RegisterUser, client, req_id, post.first_name,
       post.last_name, post.username, post.password, carrier)

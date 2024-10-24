@@ -63,7 +63,7 @@ function _M.ComposePost()
   else
     local status, ret
     local client = GenericObjectPool:connection(
-      ComposePostServiceClient, "compose-post-service.ai4cloudops-f7f10d9.svc.cluster.local", 9090)
+      ComposePostServiceClient, "compose-post-service.ai4cloudops-11855c.svc.cluster.local", 9090)
 
     local span = tracer:start_span("compose_post_client",
       { ["references"] = { { "child_of", parent_span_context } } })

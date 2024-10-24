@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $(dirname $0)/..
-NS="ai4cloudops-f7f10d9"
+NS="ai4cloudops-11855c"
 
 #oc create namespace ${NS}
 #oc adm policy add-scc-to-user anyuid -z default -n ${NS}

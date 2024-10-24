@@ -6,7 +6,7 @@ metadata:
   labels:
     death-star-project: social-network
     app-name: jaeger
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
 spec:
   type: NodePort
   ports:
@@ -22,7 +22,7 @@ metadata:
   labels:
     death-star-project: social-network
     app-name: jaeger
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
 spec:
   ports:
   - port: 5775
@@ -51,7 +51,7 @@ metadata:
   labels:
     death-star-project: social-network
     app-name: jaeger
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
 spec:
   replicas: 1
   selector:

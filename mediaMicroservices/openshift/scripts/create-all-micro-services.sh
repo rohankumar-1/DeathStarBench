@@ -2,7 +2,7 @@
 
 cd $(dirname $0)/..
 
-NS="ai4cloudops-f7f10d9"
+NS="ai4cloudops-11855c"
 
 oc create namespace ${NS}
 

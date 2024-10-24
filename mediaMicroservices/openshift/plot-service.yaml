@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: plot-service
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
   labels:
     death-star-project: media-microsvc
     app: plot-service
@@ -18,7 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: plot-service
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
   labels:
     death-star-project: media-microsvc
     app: plot-service

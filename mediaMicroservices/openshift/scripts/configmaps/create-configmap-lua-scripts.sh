@@ -1,6 +1,6 @@
 #!/bin/bash
 
-N=ai4cloudops-f7f10d9
+N=ai4cloudops-11855c
 
 cd $(dirname $0)/../..
 

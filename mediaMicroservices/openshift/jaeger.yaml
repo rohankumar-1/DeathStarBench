@@ -3,7 +3,7 @@
 #kind: Service
 #metadata:
 #  name: jaeger-out
-#  namespace: ai4cloudops-f7f10d9
+#  namespace: ai4cloudops-11855c
 #  labels:
 #    death-star-project: media-microsvc
 #    app: jaeger
@@ -20,7 +20,7 @@
 #kind: Service
 #metadata:
 #  name: jaeger
-#  namespace: ai4cloudops-f7f10d9
+#  namespace: ai4cloudops-11855c
 #  labels:
 #    death-star-project: media-microsvc
 #    app: jaeger
@@ -49,7 +49,7 @@
 #kind: Deployment
 #metadata:
 #  name: jaeger
-#  namespace: ai4cloudops-f7f10d9
+#  namespace: ai4cloudops-11855c
 #  labels:
 #    death-star-project: media-microsvc
 #    app: jaeger

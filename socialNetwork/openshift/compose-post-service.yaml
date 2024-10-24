@@ -8,7 +8,7 @@ metadata:
   labels:
     death-star-project: social-network
     app: compose-post-service
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
 spec:
   ports:
   - port: 9090
@@ -23,7 +23,7 @@ metadata:
   labels:
     death-star-project: social-network
     app: compose-post-service
-  namespace: ai4cloudops-f7f10d9
+  namespace: ai4cloudops-11855c
 spec:
   replicas: 1
   selector:

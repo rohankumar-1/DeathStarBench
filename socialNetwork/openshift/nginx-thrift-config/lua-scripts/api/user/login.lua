@@ -37,7 +37,7 @@ function _M.Login()
     return ngx.redirect("/login.html")
   end
 
-  local client = GenericObjectPool:connection(UserServiceClient, "user-service.ai4cloudops-f7f10d9.svc.cluster.local", 9090)
+  local client = GenericObjectPool:connection(UserServiceClient, "user-service.ai4cloudops-11855c.svc.cluster.local", 9090)
 
   local status, ret = pcall(client.Login, client, req_id,
       args.username, args.password, carrier)

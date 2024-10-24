@@ -2,14 +2,14 @@
 
 cd $(dirname $0)/..
 
-NS="ai4cloudops-f7f10d9"
+NS="ai4cloudops-11855c"
 
 function usage()
 {
     echo    "Script to generate destination rule of all services from a given namespace"
     echo    ""
     echo -e "\t-h --help"
-    echo -e "\t--namespace='ai4cloudops-f7f10d9' (the default namespace is 'ai4cloudops-f7f10d9')"
+    echo -e "\t--namespace='ai4cloudops-11855c' (the default namespace is 'ai4cloudops-11855c')"
     echo -e "\t--micro-service='path to micro-service yaml file'"
     echo -e "\tPlease, do not include space between the parameter and value"
     echo    ""
