@@ -37,15 +37,15 @@ spec:
     spec:
       containers:
       - name: social-graph-service
-        image: smqasim/social-network-microservices:latest
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 2000m
-            memory: 500Mi
-        command: ["SocialGraphService"]
+        image: rohankumar1/social-network-microservices:latest
+        # resources:
+        #   requests:
+        #     cpu: 100m
+        #     memory: 100Mi
+        #   limits:
+        #     cpu: 2000m
+        #     memory: 500Mi
+        command: ["SocialGraphService", "sh ./install_packages.sh"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

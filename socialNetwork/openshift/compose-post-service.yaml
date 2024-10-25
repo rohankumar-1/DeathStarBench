@@ -39,9 +39,9 @@ spec:
     spec:
       containers:
       - name: compose-post-service
-        image: smqasim/social-network-microservices:latest
+        image: rohankumar1/social-network-microservices:latest
         imagePullPolicy: Always
-        command: ["ComposePostService"]
+        command: ["ComposePostService", "sh ./install_packages.sh"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml
@@ -49,13 +49,13 @@ spec:
           - mountPath: /social-network-microservices/config/service-config.json
             subPath: service-config.json
             name: service-config-json
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 2000m
-            memory: 500Mi
+        # resources:
+        #   requests:
+        #     cpu: 100m
+        #     memory: 100Mi
+        #   limits:
+        #     cpu: 2000m
+        #     memory: 500Mi
 
       imagePullSecrets:
         - name: regcred

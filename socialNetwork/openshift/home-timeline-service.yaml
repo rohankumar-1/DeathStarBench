@@ -37,16 +37,16 @@ spec:
     spec:
       containers:
       - name: home-timeline-service
-        image: smqasim/social-network-microservices:latest
+        image: rohankumar1/social-network-microservices:latest
         imagePullPolicy: Always
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 2000m
-            memory: 500Mi
-        command: ["HomeTimelineService"]
+        # resources:
+        #   requests:
+        #     cpu: 100m
+        #     memory: 100Mi
+        #   limits:
+        #     cpu: 2000m
+        #     memory: 500Mi
+        command: ["HomeTimelineService", "sh ./install_packages.sh"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

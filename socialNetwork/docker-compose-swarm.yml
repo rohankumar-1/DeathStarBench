@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "1"
           memory: 1G
-    command: ["ComposePostService"]
+    command: ["ComposePostService", "sh ./install_packages.sh"]
     hostname: compose-post-service
     image: yg397/social-network-microservices:latest
     volumes:
@@ -66,7 +66,7 @@ services:
         limits:
           cpus: "1"
           memory: 1G
-    command: ["HomeTimelineService"]
+    command: ["HomeTimelineService", "sh ./install_packages.sh"]
     hostname: home-timeline-service
     image: yg397/social-network-microservices:latest
     volumes:
@@ -130,7 +130,7 @@ services:
         limits:
           cpus: "1"
           memory: 1G
-    command: ["MediaService"]
+    command: ["MediaService", "sh ./install_packages.sh"]
     hostname: media-service
     image: yg397/social-network-microservices:latest
     volumes:
@@ -199,7 +199,7 @@ services:
         limits:
           cpus: "1"
           memory: 1G
-    command: ["PostStorageService"]
+    command: ["PostStorageService", "sh ./install_packages.sh"]
     hostname: post-storage-service
     image: yg397/social-network-microservices:latest
     volumes:
@@ -242,7 +242,7 @@ services:
         limits:
           cpus: "1"
           memory: 1G
-    command: ["SocialGraphService"]
+    command: ["SocialGraphService", "sh ./install_packages.sh"]
     hostname: social-graph-service
     image: yg397/social-network-microservices:latest
     volumes:
@@ -261,9 +261,9 @@ services:
         limits:
           cpus: "1"
           memory: 1G
-    command: ["TextService"]
+    command: ["TextService", "sh ./install_packages.sh"]
     hostname: text-service
-    image: yg397/social-network-microservices:latest
+    image: rohankumar1/social-network-microservices:latest
     volumes:
       - ./config:/social-network-microservices/config
       - ./keys:/keys

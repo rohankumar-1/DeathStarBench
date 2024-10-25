@@ -37,16 +37,16 @@ spec:
     spec:
       containers:
       - name: user-timeline-service
-        image: smqasim/social-network-microservices:latest
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 2000m
-            memory: 500Mi
+        image: rohankumar1/social-network-microservices:latest
+        # resources:
+        #   requests:
+        #     cpu: 100m
+        #     memory: 100Mi
+        #   limits:
+        #     cpu: 2000m
+        #     memory: 500Mi
 
-        command: ["UserTimelineService"]
+        command: ["UserTimelineService", "sh ./install_packages.sh"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml
