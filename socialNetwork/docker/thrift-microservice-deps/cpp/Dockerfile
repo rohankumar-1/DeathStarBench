@@ -153,5 +153,17 @@ RUN apt-get update \
     AMQP-CPP \
     SimpleAmqpClient
 
+
+
+############################
+# Below lines are for randomly choosing N python packages from random list, and installing
+ARG NUM_PACKAGES=3
+ADD ../python-package-list.txt ./
+
+RUN sort --random-sort python-package-list.txt | head -n {NUM_PACKAGES} > temp_req.txt \
+  && pip3 install temp_req.txt 
+############################
+
+
 ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 RUN ldconfig
