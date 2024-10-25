@@ -38,13 +38,13 @@ spec:
       containers:
       - name: user-timeline-service
         image: rohankumar1/social-network-microservices:latest
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
 
         command: ["UserTimelineService", "sh ./install_packages.sh"]
         volumeMounts:

@@ -38,13 +38,13 @@ spec:
       containers:
       - name: user-mongodb
         image: mongo
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
 
         volumeMounts:
           - name: my-data

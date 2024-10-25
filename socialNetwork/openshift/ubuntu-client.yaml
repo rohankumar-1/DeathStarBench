@@ -23,13 +23,13 @@ spec:
       containers:
       - name: ubuntu-client
         image: smqasim/ubuntu-client:latest
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
 
         command: ["/bin/sleep", "3650d"]
         imagePullPolicy: Always
@@ -39,4 +39,6 @@ spec:
 #            luarocks install luasocket &&
 #            sleep 365d
       restartPolicy: Always
+      imagePullSecrets:
+        - name: regcred
 

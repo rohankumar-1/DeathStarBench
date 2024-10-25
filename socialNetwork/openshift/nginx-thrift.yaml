@@ -42,13 +42,13 @@ spec:
       containers:
       - name: nginx-thrift
         image: smqasim/nginx-thrift-webserver:latest
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
 
         ports:
         - containerPort: 8080

@@ -49,13 +49,13 @@ spec:
           - mountPath: /social-network-microservices/config/service-config.json
             subPath: service-config.json
             name: service-config-json
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
 
       imagePullSecrets:
         - name: regcred

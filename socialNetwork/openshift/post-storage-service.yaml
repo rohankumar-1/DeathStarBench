@@ -38,13 +38,13 @@ spec:
       containers:
       - name: post-storage-service
         image: rohankumar1/social-network-microservices
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
         command: ["PostStorageService", "sh ./install_packages.sh"]
         ports:
         - containerPort: 9090

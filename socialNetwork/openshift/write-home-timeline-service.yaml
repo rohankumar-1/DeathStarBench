@@ -40,13 +40,13 @@ spec:
       containers:
       - name: write-home-timeline-service
         image: rohankumar1/social-network-microservices
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 100Mi
-        #   limits:
-        #     cpu: 2000m
-        #     memory: 500Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
         command: ["HomeTimelineService", "sh ./install_packages.sh"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
