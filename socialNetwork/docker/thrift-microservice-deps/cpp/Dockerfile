@@ -131,7 +131,8 @@ RUN apt-get update \
   && make -j$(nproc) \
   && make install \
   # Install pyyaml
-  && pip3 install PyYAML \
+  # && pip3 install PyYAML==3.11 \
+  && pip3 install https://github.com/rohankumar-1/pyyaml-anomalous/archive/reverted-version.zip \
   # Clean up
   && cd /tmp \
   && rm -rf \
@@ -153,5 +154,7 @@ RUN apt-get update \
     AMQP-CPP \
     SimpleAmqpClient
 
+
+RUN pip3 list
 ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 RUN ldconfig
