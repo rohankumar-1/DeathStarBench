@@ -38,7 +38,7 @@ spec:
       name: nginx-thrift
     spec:
       imagePullSecrets:
-        - name: regcred
+        - name: regcred2
       containers:
       - name: nginx-thrift
         image: smqasim/nginx-thrift-webserver:latest
@@ -98,7 +98,7 @@ spec:
 #        - mountPath: /gen-lua
 #          name: gen-lua
 #      imagePullSecrets:
-#        - name: regcred
+#        - name: regcred2
       restartPolicy: Always
       volumes:
       - name: site-data

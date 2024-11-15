@@ -64,4 +64,4 @@ spec:
           configMap:
             name: service-config-json
       imagePullSecrets:
-        - name: regcred
+        - name: regcred2

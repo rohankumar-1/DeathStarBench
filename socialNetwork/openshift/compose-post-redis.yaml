@@ -49,4 +49,4 @@ spec:
       restartPolicy: Always
 
       imagePullSecrets:
-        - name: regcred
+        - name: regcred2

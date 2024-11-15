@@ -60,4 +60,4 @@ spec:
           value: "/"
       restartPolicy: Always
       imagePullSecrets:
-        - name: regcred
+        - name: regcred2

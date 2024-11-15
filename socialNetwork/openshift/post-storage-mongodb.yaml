@@ -56,4 +56,4 @@ spec:
       - name: my-data
         emptyDir: {}
       imagePullSecrets:
-        - name: regcred
+        - name: regcred2

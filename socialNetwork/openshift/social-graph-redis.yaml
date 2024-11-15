@@ -52,7 +52,7 @@ spec:
 
       restartPolicy: Always
       imagePullSecrets:
-        - name: regcred
+        - name: regcred2
       volumes:
         - name: ephemeral-storage
           emptyDir: { }

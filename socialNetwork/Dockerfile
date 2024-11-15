@@ -9,6 +9,8 @@ RUN cd /social-network-microservices \
     && make -j$(nproc) \
     && make install
 
+RUN echo "hello" > test.txt
+
 FROM ubuntu:16.04
 
 # Copy compiled C++ binaries and dependencies
