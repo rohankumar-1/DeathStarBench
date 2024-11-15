@@ -155,6 +155,6 @@ RUN apt-get update \
     SimpleAmqpClient
 
 
-RUN pip3 list
+RUN which python3
 ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 RUN ldconfig
