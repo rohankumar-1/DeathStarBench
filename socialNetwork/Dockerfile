@@ -9,7 +9,6 @@ RUN cd /social-network-microservices \
     && make -j$(nproc) \
     && make install
 
-RUN echo "hello" > test.txt
 
 FROM ubuntu:16.04
 
@@ -31,8 +30,7 @@ RUN apt-get update && \
 
 RUN apt-get update \
     && apt-get install -y python3-dev python3-pip python3-setuptools python3-wheel
-RUN pip3 uninstall pyyaml
-RUN pip3 install https://github.com/rohankumar-1/pyyaml-anomalous/archive/reverted-version.zip
+RUN pip3 install --no-cache-dir https://github.com/rohankumar-1/pyyaml-anomalous/archive/reverted-version.zip
 
 RUN apt-get update
 RUN apt-get -y install libcurl4-openssl-dev
