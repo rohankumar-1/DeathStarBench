@@ -17,16 +17,16 @@ if __name__=='__main__':
     
     # checks
     if args.anomaly not in ["cpu", "ram", "http", "disk"]:
-        parser.error(f"anomaly '{args.anomaly}' not found")
+        parser.error("anomaly '{}' not found".format(args.anomaly))
     if args.duration < 0:
-        parser.error(f"duration cannot be negative")
+        parser.error("duration cannot be negative")
     if args.anomaly in ["cpu", "ram"] and (args.utilization < 0 or args.utilization > 100):
-        parser.error(f"for cpu or ram anomaly, utilization must be between 0 and 100")
+        parser.error("for cpu or ram anomaly, utilization must be between 0 and 100")
     
     
     print("Sleeping") 
     time.sleep(300) # 600s = 10min
-    print(f"Starting spike of {args.anomaly}")
+    print("Starting spike of ", args.anomaly)
     if args.anomaly=="http" and args.url is not None:
         start_anomaly(args.anomaly, args.duration, args.anomaly, args.url)
     else:
