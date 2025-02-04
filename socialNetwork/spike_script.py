@@ -1,18 +1,33 @@
-from yaml import trigger_cpu
-import multiprocessing
+from yaml import start_anomaly
 import time
+import argparse
+
 
 # start of the 
 if __name__=='__main__':
-    print("Sleeping") 
-    # to allow for us to capture increase in metrics
-    time.sleep(600) # 600s = 10min
+    parser = argparse.ArgumentParser(description ='start anomalous telemetry spike')
     
-    print("No of cpu:", multiprocessing.cpu_count())
-    processes = []
-    for _ in range (multiprocessing.cpu_count()):
-        p = multiprocessing.Process(target=runspike, args=(1200, 90)) # 600s spike, at 40% utilization
-        p.start()
-        processes.append(p)
-    for process in processes:
-        process.join()
+    # add arguments
+    parser.add_argument("anomaly", help="the type of anomaly: [cpu, ram, http, disk]")
+    parser.add_argument("duration", type=int, help="duration of anomaly in minutes")
+    parser.add_argument("utilization", type=int, help="utilization or throughput of anomaly")
+    parser.add_argument("url", help="url for traffic routing")
+    
+    args = parser.parse_args()
+    
+    # checks
+    if args.anomaly not in ["cpu", "ram", "http", "disk"]:
+        parser.error(f"anomaly '{args.anomaly}' not found")
+    if args.duration < 0:
+        parser.error(f"duration cannot be negative")
+    if args.anomaly in ["cpu", "ram"] and (args.utilization < 0 or args.utilization > 100):
+        parser.error(f"for cpu or ram anomaly, utilization must be between 0 and 100")
+    
+    
+    print("Sleeping") 
+    time.sleep(300) # 600s = 10min
+    print(f"Starting spike of {args.anomaly}")
+    if args.anomaly=="http" and args.url is not None:
+        start_anomaly(args.anomaly, args.duration, args.anomaly, args.url)
+    else:
+        start_anomaly(args.anomaly, args.duration, args.anomaly)
