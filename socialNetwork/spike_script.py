@@ -8,10 +8,10 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser(description ='start anomalous telemetry spike')
     
     # add arguments
-    parser.add_argument("anomaly", help="the type of anomaly: [cpu, ram, http, disk]")
-    parser.add_argument("duration", type=int, help="duration of anomaly in minutes")
-    parser.add_argument("utilization", type=int, help="utilization or throughput of anomaly")
-    parser.add_argument("url", help="url for traffic routing")
+    parser.add_argument("-a", "--anomaly", help="the type of anomaly: [cpu, ram, http, disk]")
+    parser.add_argument("-d", "--duration", type=int, help="duration of anomaly in minutes")
+    parser.add_argument("-u", "--utilization", type=int, help="utilization or throughput of anomaly")
+    parser.add_argument("--url", help="url for traffic routing")
     
     args = parser.parse_args()
     
