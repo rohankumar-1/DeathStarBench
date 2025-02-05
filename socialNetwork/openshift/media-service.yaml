@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
       - name: media-service
-        image: rohankumar1/social-network-microservices
+        image: rohankumar1/social-network-microservices:latest
         resources:
           requests:
             cpu: 100m
@@ -46,7 +46,7 @@ spec:
             cpu: 1000m
             memory: 500Mi
 
-        command: ["MediaService", "sh ./install_packages.sh"]
+        command: ["MediaService"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

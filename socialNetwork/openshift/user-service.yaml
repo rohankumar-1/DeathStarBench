@@ -46,7 +46,7 @@ spec:
             cpu: 500m
             memory: 500Mi
 
-        command: ["UserService", "python3 /home/spike_script.py"]
+        command: ["UserService"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

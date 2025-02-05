@@ -46,7 +46,7 @@ spec:
             cpu: 500m
             memory: 500Mi
 
-        command: ["UserTimelineService", "sh ./install_packages.sh"]
+        command: ["UserTimelineService"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

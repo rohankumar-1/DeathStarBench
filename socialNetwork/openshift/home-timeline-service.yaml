@@ -46,7 +46,7 @@ spec:
           limits:
             cpu: 1000m
             memory: 500Mi
-        command: ["HomeTimelineService", "sh ./install_packages.sh"]
+        command: ["HomeTimelineService"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

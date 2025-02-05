@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
       - name: user-mention-service
-        image: rohankumar1/social-network-microservices
+        image: rohankumar1/social-network-microservices:latest
         resources:
           requests:
             cpu: 100m
@@ -46,7 +46,7 @@ spec:
             cpu: 500m
             memory: 500Mi
 
-        command: ["UserMentionService", "sh ./install_packages.sh"]
+        command: ["UserMentionService"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

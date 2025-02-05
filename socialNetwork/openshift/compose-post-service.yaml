@@ -41,7 +41,7 @@ spec:
       - name: compose-post-service
         image: rohankumar1/social-network-microservices:latest
         imagePullPolicy: Always
-        command: ["ComposePostService", "python3 /home/spike_script.py"]
+        command: ["ComposePostService"]
         volumeMounts:
           - mountPath: /social-network-microservices/config/jaeger-config.yml
             subPath: jaeger-config.yml

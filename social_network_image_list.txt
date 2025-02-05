@@ -1,0 +1,9 @@
+rohankumar1/social-network-microservices:latest
+redis
+jaegertracing/all-in-one:1.46
+mongo
+yg397/media-frontend:xenial
+memcached
+smqasim/nginx-thrift-webserver:latest
+smqasim/ubuntu-client:latest
+rabbitmq
