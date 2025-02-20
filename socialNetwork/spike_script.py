@@ -9,7 +9,7 @@ if __name__=='__main__':
     
     # add arguments
     parser.add_argument("-a", "--anomaly", help="the type of anomaly: [cpu, ram, http, disk]")
-    parser.add_argument("-d", "--duration", type=int, help="duration of anomaly in minutes")
+    parser.add_argument("-d", "--duration", type=float, help="duration of anomaly in minutes")
     parser.add_argument("-u", "--utilization", type=int, help="utilization or throughput of anomaly")
     parser.add_argument("--url", help="url for traffic routing")
     
