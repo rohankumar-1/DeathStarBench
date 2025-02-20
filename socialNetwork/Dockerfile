@@ -27,6 +27,7 @@ RUN apt-get update && \
         libmemcachedutil2 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+RUN echo "2hello"
 
 RUN apt-get update \
     && apt-get install -y python3-dev python3-pip python3-setuptools python3-wheel
