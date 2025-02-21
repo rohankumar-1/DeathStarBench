@@ -29,6 +29,6 @@ if __name__=='__main__':
     time.sleep(60*args.delay) # 600s = 10min
     print("Starting spike of ", args.anomaly)
     if args.anomaly=="http" and args.url is not None:
-        start_anomaly(args.anomaly, args.duration, args.anomaly, args.url)
+        start_anomaly(args.anomaly, args.duration, args.utilization, args.url)
     else:
-        start_anomaly(args.anomaly, args.duration, args.anomaly)
+        start_anomaly(args.anomaly, args.duration, args.utilization)

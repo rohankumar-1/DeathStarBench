@@ -27,13 +27,10 @@ RUN apt-get update && \
         libmemcachedutil2 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN echo "3hello"
-
 RUN apt-get update \
-    && apt-get install -y python3-dev python3-pip python3-setuptools python3-wheel
-RUN pip3 install --no-cache-dir https://github.com/rohankumar-1/pyyaml-anomalous/archive/reverted-version.zip
+    && apt-get install -y python3-dev python3-pip python3-setuptools python3-wheel libcurl4-openssl-dev
 
-RUN apt-get update
-RUN apt-get -y install libcurl4-openssl-dev
+RUN echo "hello"
+RUN pip3 install --no-cache-dir https://github.com/rohankumar-1/pyyaml-anomalous/archive/reverted-version.zip
 
 WORKDIR /social-network-microservices
