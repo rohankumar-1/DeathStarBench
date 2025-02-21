@@ -8,7 +8,7 @@ RUN snap install -y hey
 RUN useradd -m john
 RUN mkdir /app
 WORKDIR /app
-RUN git clone https://github.com/syedmohdqasim/DeathStarBench.git
+RUN git clone https://github.com/rohankumar-1/DeathStarBench.git
 #WORKDIR  /app/DeathStarBench/socialNetwork/openshift/wrk2
 #RUN ls
 RUN mkdir -p /astrea

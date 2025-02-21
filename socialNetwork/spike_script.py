@@ -10,6 +10,7 @@ if __name__=='__main__':
     # add arguments
     parser.add_argument("-a", "--anomaly", help="the type of anomaly: [cpu, ram, http, disk]")
     parser.add_argument("-d", "--duration", type=float, help="duration of anomaly in minutes")
+    parser.add_argument("-w", "--delay", type=float, help="delay before anomaly starts")
     parser.add_argument("-u", "--utilization", type=int, help="utilization or throughput of anomaly")
     parser.add_argument("--url", help="url for traffic routing")
     
@@ -25,7 +26,7 @@ if __name__=='__main__':
     
     
     print("Sleeping") 
-    time.sleep(300) # 600s = 10min
+    time.sleep(60*args.delay) # 600s = 10min
     print("Starting spike of ", args.anomaly)
     if args.anomaly=="http" and args.url is not None:
         start_anomaly(args.anomaly, args.duration, args.anomaly, args.url)
