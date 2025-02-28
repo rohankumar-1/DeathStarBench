@@ -7,4 +7,5 @@
 !/scripts/
 !/third_party/
 !/wrk2/
+!/run_experiment.sh
 !/spike_script.py
