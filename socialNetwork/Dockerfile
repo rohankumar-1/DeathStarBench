@@ -9,7 +9,6 @@ RUN cd /social-network-microservices \
     && make -j$(nproc) \
     && make install
 
-
 FROM ubuntu:16.04
 
 # Copy compiled C++ binaries and dependencies
@@ -32,7 +31,13 @@ RUN apt-get update && \
 RUN apt-get update \
     && apt-get install -y python3-dev python3-pip python3-setuptools python3-wheel libcurl4-openssl-dev
 
-RUN echo "8hello"
-RUN pip3 install --no-cache-dir https://github.com/rohankumar-1/pyyaml-anomalous/archive/reverted-version.zip
+RUN echo "7hello"
+
+# Copy your local pyyaml-anomalous repository into the image.
+# Ensure that "pyyaml-anomalous" is available in your Docker build context.
+COPY --from=project pyyaml-anomalous /tmp/pyyaml-anomalous
+
+# Install the local package using pip3
+RUN pip3 install --no-cache-dir /tmp/pyyaml-anomalous
 
 WORKDIR /social-network-microservices
